@@ -1,6 +1,6 @@
 # Salesforce Package Manager
 
-Very simple Package Manager app that can be used to easily push package upgrades to subscribers of Salesforce unlocked packages.
+Very simple **Package Manager** app that can be used to easily push package upgrades to subscribers of Salesforce unlocked packages.
 
 <a href="https://githubsfdeploy.herokuapp.com">
   <img alt="Deploy to Salesforce"
@@ -11,7 +11,7 @@ Very simple Package Manager app that can be used to easily push package upgrades
 
 Before deploying to your DevHub, set the `PKGR_AppCnt.MOCK_RESPONSES` to `false` in order to see the actual packages from your org.
 
-After the deployment assign to your user the **App - Package Manager** permission set in order to gain access to the *Package Manager* tab.
+After the deployment assign to your user the **App - Package Manager** permission set in order to gain access to the **Package Manager** tab.
 
 ## Quick Overview
 
