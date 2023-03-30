@@ -16,13 +16,13 @@ After the deployment assign to your user the **App - Package Manager** permissio
 ## Quick Overview
 
 ### See all of your packages
-![Packages Overview](/imgs/1.PNG)
+![Packages Overview](/imgs/1.png)
 
 ### Show available versions of the selected package
-![Package Versions](/imgs/2.PNG)
+![Package Versions](/imgs/2.png)
 
 ### Check package subscribers and select them for updates or downgrades
-![Subscribers](/imgs/3.PNG)
+![Subscribers](/imgs/3.png)
 
 ### Monitor the update progress
-![Push Request](/imgs/4.PNG)
+![Push Request](/imgs/4.png)
