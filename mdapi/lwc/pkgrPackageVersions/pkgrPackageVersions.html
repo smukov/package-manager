@@ -1,0 +1,11 @@
+<template>
+  <lightning-datatable
+    class="result-table"
+    key-field="Id"
+    data={packageVersions}
+    columns={columns}
+    hide-checkbox-column
+    onrowaction={handleOpenPackageVersion}
+  >
+  </lightning-datatable>
+</template>

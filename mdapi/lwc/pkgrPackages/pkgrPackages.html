@@ -1,0 +1,11 @@
+<template>
+  <lightning-datatable
+    class="result-table"
+    key-field="Id"
+    data={packages}
+    columns={columns}
+    hide-checkbox-column
+    onrowaction={handleOpenPackage}
+  >
+  </lightning-datatable>
+</template>

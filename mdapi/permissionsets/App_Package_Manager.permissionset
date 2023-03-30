@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>PKGR_AppCnt</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>Gives access to the Package Manager app. This app is used to push Unlocked Package updates to subscribers.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>App - Package Manager</label>
+    <pageAccesses>
+        <apexPage>ApiSessionId</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <tabSettings>
+        <tab>Package_Manager</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
+</PermissionSet>

@@ -1,0 +1,107 @@
+<template>
+  <div class="classic slds-var-m-bottom_xx-large">
+    <!-- content -->
+    <lightning-card icon-name="custom:custom63" class="app-card">
+      <div slot="title">
+        {label.packageManager} <span class="card-subtitle">{subtitle}</span>
+      </div>
+      <!-- card body -->
+      <div>
+        <!-- breadcrumbs -->
+        <lightning-breadcrumbs class="slds-var-p-horizontal_medium">
+          <template if:true={selectedPackage}>
+            <lightning-breadcrumb
+              label={selectedPackage.Name}
+              href="#"
+              onclick={handleNavigateToPackages}
+            >
+            </lightning-breadcrumb>
+          </template>
+          <template if:true={selectedPackageVersion}>
+            <lightning-breadcrumb
+              label={selectedPackageVersion.version}
+              href="#"
+              onclick={handleNavigateToPackageVersions}
+            >
+            </lightning-breadcrumb>
+          </template>
+          <template if:true={isStepFour}>
+            <lightning-breadcrumb
+              label={pushRequestBreadcrump}
+              href="#"
+              onclick={handleNavigateToPackageSubscribers}
+            >
+            </lightning-breadcrumb>
+          </template>
+        </lightning-breadcrumbs>
+
+        <!-- packages -->
+        <template if:true={isStepOne}>
+          <div class="slds-var-p-top_medium">
+            <c-pkgr-packages
+              onopenpackage={handleOpenPackage}
+            ></c-pkgr-packages>
+          </div>
+        </template>
+
+        <!-- package versions -->
+        <template if:true={isStepTwo}>
+          <div class="slds-var-p-top_medium">
+            <c-pkgr-package-versions
+              package-versions={packageVersions}
+              onopenpackageversion={handleOpenPackageVersion}
+            ></c-pkgr-package-versions>
+          </div>
+        </template>
+
+        <!-- subscribers -->
+        <template if:true={isStepThree}>
+          <div class="slds-var-p-top_medium">
+            <c-pkgr-subscribers
+              subscribers={subscribers}
+              onenqueuesubscribertoggle={handleEnqueueSubscriberToggle}
+            ></c-pkgr-subscribers>
+          </div>
+          <div class="slds-clearfix slds-var-p-top_medium slds-p-right_x-small">
+            <lightning-button
+              class="slds-float_right"
+              variant="brand"
+              label="Submit"
+              disabled={isSubmitPushRequestDisabled}
+              onclick={handleSubmitPushRequest}
+            ></lightning-button>
+          </div>
+        </template>
+
+        <!-- push job status -->
+        <template if:true={isStepFour}>
+          <div class="slds-var-p-top_medium">
+            <c-pkgr-push-jobs
+              push-jobs={pushJobs}
+              onabortpushjob={handleAbortPushJob}
+            >
+            </c-pkgr-push-jobs>
+          </div>
+          <div class="slds-clearfix slds-var-p-top_medium slds-p-right_x-small">
+            <lightning-button
+              class="slds-float_right"
+              variant="brand"
+              label="Refresh"
+              disabled={disableRefreshPushRequestStatusButton}
+              onclick={handleRefreshPushRequestStatus}
+            ></lightning-button>
+            <lightning-button
+              class="slds-float_right slds-var-p-right_x-small"
+              variant="destructive"
+              label="Abort"
+              disabled={isAbortPushRequestDisabled}
+              onclick={handleAbortPushRequest}
+            ></lightning-button>
+          </div>
+        </template>
+
+        <!-- subscribed orgs table -->
+      </div>
+    </lightning-card>
+  </div>
+</template>

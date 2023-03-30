@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>PKGR_AppCnt</members>
+        <members>PKGR_AppCntTest</members>
+        <members>PKGR_MockResponses</members>
+        <members>ServerResponse</members>
+        <members>UTIL_Domain</members>
+        <members>UTIL_HttpCalloutMock</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ApiSessionId</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Package_Manager</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>pkgrApp</members>
+        <members>pkgrPackageVersions</members>
+        <members>pkgrPackages</members>
+        <members>pkgrPushJobs</members>
+        <members>pkgrSubscribers</members>
+        <members>utilSalesforceConsole</members>
+        <members>utilServer</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>App_Package_Manager</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>56.0</version>
+</Package>
