@@ -1,18 +1,28 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Package Manager
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Very simple Package Manager app that can be used to easily push package upgrades to subscribers of Salesforce unlocked packages.
 
-## How Do You Plan to Deploy Your Changes?
+<a href="https://githubsfdeploy.herokuapp.com">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Quick Documentation
 
-## Configure Your Salesforce DX Project
+Before deploying to your DevHub, set the `PKGR_AppCnt.MOCK_RESPONSES` to `false` in order to see the actual packages from your org.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+After the deployment assign to your user the **App - Package Manager** permission set in order to gain access to the *Package Manager* tab.
 
-## Read All About It
+## Quick Overview
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### See all of your packages
+![Packages Overview](/imgs/1.PNG)
+
+### Show available versions of the selected package
+![Package Versions](/imgs/2.PNG)
+
+### Check package subscribers and select them for updates or downgrades
+![Subscribers](/imgs/3.PNG)
+
+### Monitor the update progress
+![Push Request](/imgs/4.PNG)
