@@ -1,0 +1,11 @@
+<template>
+  <lightning-datatable
+    class="result-table"
+    key-field="Id"
+    data={pushJobs}
+    columns={columns}
+    hide-checkbox-column
+    onrowaction={handleAbortPushJob}
+  >
+  </lightning-datatable>
+</template>

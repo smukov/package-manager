@@ -1,0 +1,11 @@
+<template>
+  <lightning-datatable
+    class="result-table"
+    key-field="Id"
+    data={subscribers}
+    columns={columns}
+    hide-checkbox-column
+    onrowaction={handleEnqueueSubscriberToggle}
+  >
+  </lightning-datatable>
+</template>
