@@ -25,7 +25,6 @@ global class UTIL_HttpCalloutMock implements HttpCalloutMock {
      */
     global HTTPResponse respond(HTTPRequest req) {
         String endpoint = req.getEndpoint();
-        System.debug('endpoint: ' + endpoint);
 
         HttpResponse res = responseMap.get(endpoint);
         return res != null ? res : this.defaultResponse;

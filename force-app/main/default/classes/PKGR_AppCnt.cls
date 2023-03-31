@@ -236,16 +236,12 @@ public with sharing class PKGR_AppCnt {
         req.setMethod(method);
         if (String.isNotBlank(body)) {
             req.setBody(body);
-            System.debug('requestBody:');
-            System.debug(body);
         }
 
         final Http h = new Http();
         final HttpResponse res = h.send(req);
 
         final String responseBody = res.getBody();
-        System.debug('responseBody:');
-        System.debug(responseBody);
 
         return responseBody;
     }
